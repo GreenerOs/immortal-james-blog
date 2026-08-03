@@ -1,0 +1,37 @@
+{{ define "main" }}
+<div class="single-content">
+  <h1 class="post-title">{{ .Title }}</h1>
+  <span class="post-date">{{ .Date.Format "January 2, 2006" }} &bull; by Immortal James</span>
+  <hr class="post-divider">
+
+  {{ if .Params.youtube }}
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/{{ .Params.youtube }}"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+    </iframe>
+  </div>
+  {{ end }}
+
+  {{ if .Params.james_note }}
+  <div class="post-note">
+    <strong>James says:</strong> "{{ .Params.james_note }}"
+  </div>
+  {{ end }}
+
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+
+  <div class="post-meta">
+    Posted in
+    {{ range $i, $c := .Params.categories }}
+      {{ if $i }}, {{ end }}<a href="/categories/{{ $c | urlize }}">{{ $c }}</a>
+    {{ end }}
+  </div>
+
+  <hr class="post-separator">
+  <p class="back-link">&larr; <a href="/">Back to Immortal James</a></p>
+</div>
+{{ end }}

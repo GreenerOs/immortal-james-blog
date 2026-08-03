@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ if .Title }}{{ .Title }} — {{ end }}{{ .Site.Title }}</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #111;
+    color: #ccc;
+    font-family: 'Lucida Grande', 'Verdana', 'Arial', sans-serif;
+    font-size: 10px;
+    text-align: center;
+  }
+  a { color: #c49b2a; text-decoration: none; }
+  a:hover { color: #e8c84a; text-decoration: underline; }
+  .wp-site-blocks { max-width: 760px; margin: 20px auto; padding: 20px; }
+  .site-container {
+    background: #0d0d0d;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .site-header {
+    background: url('/images/banner.png') no-repeat center center / cover;
+    padding: 50px 20px;
+    border-radius: 6px;
+    margin: 10px;
+    position: relative;
+    min-height: 160px;
+  }
+  .site-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 60px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  }
+  .site-title {
+    font-size: 2.8em;
+    font-weight: normal;
+    font-family: 'Georgia', 'Baskerville', 'Times New Roman', serif;
+    color: #f5e6c8;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    position: relative; z-index: 1;
+  }
+  .site-tagline {
+    font-size: 1.2em;
+    color: #c49b2a;
+    font-style: italic;
+    font-family: 'Georgia', 'Baskerville', serif;
+    position: relative; z-index: 1;
+  }
+  .site-nav {
+    display: flex;
+    padding: 0 20px;
+    background: #0a0a0a;
+    border-bottom: 2px solid #222;
+    margin: 0 10px;
+  }
+  .site-nav a {
+    color: #999;
+    padding: 8px 16px;
+    font-size: 1.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .site-nav a:hover { color: #c49b2a; background: #111; }
+  .single-content { padding: 20px 40px; text-align: left; }
+  .post-title {
+    font-family: 'Lucida Grande', 'Verdana', 'Arial', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    color: #c49b2a;
+    margin-bottom: 4px;
+  }
+  .post-date { font-size: 1em; color: #666; margin-bottom: 20px; display: block; }
+  .post-divider { border: none; border-top: 2px solid #333; margin: 0 0 25px 0; }
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 25px;
+    background: #000;
+  }
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+  }
+  .post-note {
+    background: #1a1a1a;
+    border-left: 3px solid #c49b2a;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+    color: #888; font-style: italic;
+  }
+  .post-content { font-size: 1.2em; line-height: 1.6em; color: #aaa; margin-bottom: 20px; }
+  .post-content p { margin-bottom: 12px; }
+  .post-meta { font-size: 1em; color: #555; margin-bottom: 25px; }
+  .post-separator { border: none; border-top: 3px solid #333; margin: 25px 0; }
+  .back-link { font-size: 1em; }
+  .site-footer { padding: 15px 20px 20px; text-align: center; font-size: 0.9em; color: #555; }
+  .site-footer a { color: #c49b2a; }
+
+  /* Home page post list */
+  .home-posts { padding: 20px 40px; text-align: left; }
+  .home-post {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #333;
+  }
+  .home-post:last-child { border-bottom: none; }
+  .home-post h2 {
+    font-family: 'Lucida Grande', 'Verdana', 'Arial', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 0 3px 0;
+  }
+  .home-post h2 a { color: #c49b2a; }
+  .home-post .hp-date { font-size: 0.9em; color: #666; margin-bottom: 10px; display: block; }
+  .home-post .hp-summary { font-size: 1.1em; color: #aaa; line-height: 1.5em; }
+</style>
+</head>
+<body>
+<div class="wp-site-blocks">
+  <div class="site-container">
+    <header class="site-header">
+      <h1 class="site-title">Immortal James</h1>
+      <p class="site-tagline">Things About Green &bull; Don't Die</p>
+    </header>
+    <nav class="site-nav">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/categories/music">Music</a>
+      <a href="/categories/gaming">Gaming</a>
+      <a href="/categories/streaming">Streaming</a>
+      <a href="/categories/the-process">The Process</a>
+      <a href="/posts">Archive</a>
+    </nav>
+    {{ block "main" . }}{{ end }}
+    <footer class="site-footer">
+      <p>Immortal James is an alter ego of Moe Green. &copy; {{ now.Format "2006" }}.</p>
+      <p style="margin-top:4px;">Powered by coffee, pixel art, and green fedoras.</p>
+    </footer>
+  </div>
+</div>
+</body>
+</html>
