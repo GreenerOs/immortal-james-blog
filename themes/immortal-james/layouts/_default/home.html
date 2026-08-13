@@ -1,6 +1,7 @@
 {{ define "main" }}
 <div class="home-posts">
-  {{ range first 1 .Pages }}
+  {{ $posts := where .Site.RegularPages "Section" "posts" }}
+  {{ range first 1 $posts }}
   <article class="home-post home-featured">
     <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     <span class="hp-date">{{ .Date.Format "January 2, 2006" }} &bull; by Immortal James</span>
@@ -25,13 +26,13 @@
     <div class="post-content">{{ .Content }}</div>
   </article>
 
-  {{ if gt (len $.Pages) 1 }}
+  {{ if gt (len $posts) 1 }}
   <hr class="post-separator">
   <h3 style="color:#c49b2a; margin-bottom:15px;">More Posts</h3>
   {{ end }}
   {{ end }}
 
-  {{ range after 1 .Pages }}
+  {{ range after 1 $posts }}
   <article class="home-post">
     <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     <span class="hp-date">{{ .Date.Format "January 2, 2006" }}</span>
