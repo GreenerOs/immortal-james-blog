@@ -2,17 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Immortal James</title>
-    <link>https://immortal-james.netlify.app/categories/</link>
+    <link>https://immortaljames.com/categories/</link>
     <description>Recent content in Categories on Immortal James</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Aug 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://immortal-james.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://immortaljames.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Music</title>
+      <link>https://immortaljames.com/categories/music/</link>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>https://immortaljames.com/categories/music/</guid>
+      <description></description>
+    </item>
     <item>
       <title>The Process</title>
-      <link>https://immortal-james.netlify.app/categories/the-process/</link>
+      <link>https://immortaljames.com/categories/the-process/</link>
       <pubDate>Sun, 02 Aug 2026 00:00:00 +0000</pubDate>
-      <guid>https://immortal-james.netlify.app/categories/the-process/</guid>
+      <guid>https://immortaljames.com/categories/the-process/</guid>
       <description></description>
     </item>
   </channel>

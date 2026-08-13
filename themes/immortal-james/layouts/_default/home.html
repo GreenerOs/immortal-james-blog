@@ -1,6 +1,37 @@
 {{ define "main" }}
 <div class="home-posts">
-  {{ range .Pages }}
+  {{ range first 1 .Pages }}
+  <article class="home-post home-featured">
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <span class="hp-date">{{ .Date.Format "January 2, 2006" }} &bull; by Immortal James</span>
+    <hr class="post-divider">
+
+    {{ if .Params.youtube }}
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/{{ .Params.youtube }}"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+      </iframe>
+    </div>
+    {{ end }}
+
+    {{ if .Params.james_note }}
+    <div class="post-note">
+      <strong>James says:</strong> "{{ .Params.james_note }}"
+    </div>
+    {{ end }}
+
+    <div class="post-content">{{ .Content }}</div>
+  </article>
+
+  {{ if gt (len $.Pages) 1 }}
+  <hr class="post-separator">
+  <h3 style="color:#c49b2a; margin-bottom:15px;">More Posts</h3>
+  {{ end }}
+  {{ end }}
+
+  {{ range after 1 .Pages }}
   <article class="home-post">
     <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     <span class="hp-date">{{ .Date.Format "January 2, 2006" }}</span>

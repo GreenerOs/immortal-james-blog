@@ -2,21 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://immortal-james.netlify.app/categories/</loc>
+    <loc>https://immortaljames.com/categories/</loc>
+    <lastmod>2026-08-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://immortaljames.com/posts/danny-fly-pt-2/</loc>
+    <lastmod>2026-08-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://immortaljames.com/</loc>
+    <lastmod>2026-08-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://immortaljames.com/categories/music/</loc>
+    <lastmod>2026-08-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://immortaljames.com/posts/</loc>
+    <lastmod>2026-08-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://immortaljames.com/posts/the-art-of-not-quitting/</loc>
     <lastmod>2026-08-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://immortal-james.netlify.app/</loc>
+    <loc>https://immortaljames.com/categories/the-process/</loc>
     <lastmod>2026-08-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://immortal-james.netlify.app/posts/</loc>
-    <lastmod>2026-08-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://immortal-james.netlify.app/posts/the-art-of-not-quitting/</loc>
-    <lastmod>2026-08-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://immortal-james.netlify.app/categories/the-process/</loc>
-    <lastmod>2026-08-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://immortal-james.netlify.app/tags/</loc>
+    <loc>https://immortaljames.com/tags/</loc>
   </url>
 </urlset>

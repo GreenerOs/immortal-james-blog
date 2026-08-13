@@ -37,20 +37,26 @@
     height: 60px;
     background: linear-gradient(transparent, rgba(0,0,0,0.7));
   }
+  .header-text {
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+    text-align: right;
+    z-index: 2;
+  }
   .site-title {
     font-size: 2.8em;
     font-weight: normal;
     font-family: 'Georgia', 'Baskerville', 'Times New Roman', serif;
     color: #f5e6c8;
     text-shadow: 0 1px 3px rgba(0,0,0,0.8);
-    position: relative; z-index: 1;
+    margin: 0;
   }
   .site-tagline {
     font-size: 1.2em;
     color: #c49b2a;
     font-style: italic;
     font-family: 'Georgia', 'Baskerville', serif;
-    position: relative; z-index: 1;
   }
   .site-nav {
     display: flex;
@@ -107,7 +113,6 @@
   .site-footer { padding: 15px 20px 20px; text-align: center; font-size: 0.9em; color: #555; }
   .site-footer a { color: #c49b2a; }
 
-   
   .home-posts { padding: 20px 40px; text-align: left; }
   .home-post {
     margin-bottom: 25px;
@@ -130,8 +135,10 @@
 <div class="wp-site-blocks">
   <div class="site-container">
     <header class="site-header">
-      <h1 class="site-title">Immortal James</h1>
-      <p class="site-tagline">Things About Green &bull; Don't Die</p>
+      <div class="header-text">
+        <h1 class="site-title">Immortal James</h1>
+        <p class="site-tagline">We've Only Just Begun...</p>
+      </div>
     </header>
     <nav class="site-nav">
       <a href="/">Home</a>
@@ -181,8 +188,7 @@
 </div>
 
     <footer class="site-footer">
-      <p>Immortal James is an alter ego of Moe Green. &copy; 2026.</p>
-      <p style="margin-top:4px;">Powered by coffee, pixel art, and green fedoras.</p>
+      <p>Immortal James is with your aunt</p>
     </footer>
   </div>
 </div>
